@@ -65,18 +65,18 @@ compareChoices();
 
 // let playerChoice = player.jack;
   
-// document.querySelector('.paper').addEventListener('click', function(e) {
-//   if(e.target.value = 1) {
-//     console.log(player[0] = rpc[1]);
-//   }
-// })
-//  document.querySelector('.scissors').addEventListener('click', function(e) {
+document.querySelector('.paper').addEventListener('click', function(e) {
+  if(e.target.value = 1) {
+    console.log(player[0] = rpc[1]);
+  }
+})
+ document.querySelector('.scissors').addEventListener('click', function(e) {
  
-//    if(e.target.value = 2) {
+   if(e.target.value = 2) {
  
-//     playerChoice = rpc[2];
-//   }
-// })
+    playerChoice = rpc[2];
+  }
+})
 
 const rockR = document.querySelector('.rock').value
 
