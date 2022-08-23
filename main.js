@@ -11,13 +11,43 @@ const computer = {
 };
 
 
+let rock = parseInt(document.querySelector('#rock').value);
+let paper = parseInt(document.querySelector('#paper').value);
+let scissors = parseInt(document.querySelector('#scissors').value);
+
+
+function resultCall() {
+  if (rock === 0) {
+    player.jack = rpc[0];
+  }
+  else if (paper === 1) {
+    player.jack = rpc[1];
+  }
+ else if (scissors === 2) {
+    player.jack = rpc[2];
+
+}
+compareChoices()
+}
+
+
+
+let rockValue = document.getElementById('rock');
+rockValue.addEventListener('click', resultCall);
+
+let paperValue = document.getElementById('paper');
+paperValue.addEventListener('click', resultCall);
+
+let scissorValue = document.getElementById('scissors');
+scissorValue.addEventListener('click', resultCall);
+
+
 function computerChooses() {
+  
   let getRandom = Math.floor(Math.random() * rpc.length);
   computer.alphaGo = rpc[getRandom];
 }
 computerChooses()
-
-
 
 
 function compareChoices() {
@@ -52,6 +82,7 @@ else if (computer.alphaGo === rpc[2]) {
  }
 }
 
+
 function getResult(result) {
   const push = document.createElement('p');
     push.innerText = result;
@@ -59,29 +90,4 @@ function getResult(result) {
     grab.append(push);
 }
 
-compareChoices();
-
-
-
-// let playerChoice = player.jack;
-  
-document.querySelector('.paper').addEventListener('click', function(e) {
-  if(e.target.value = 1) {
-    console.log(player[0] = rpc[1]);
-  }
-})
- document.querySelector('.scissors').addEventListener('click', function(e) {
- 
-   if(e.target.value = 2) {
- 
-    playerChoice = rpc[2];
-  }
-})
-
-const rockR = document.querySelector('.rock').value
-
-function bestGame(result) {
-  if(parseInt(result) = 1) {
-    console.log(player[0] = rpc[1]);
-  }
-}
+compareChoices()
